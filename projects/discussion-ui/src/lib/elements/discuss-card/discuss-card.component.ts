@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import dayjs from 'dayjs'
+import { default as dayjs } from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-dayjs.extend(relativeTime);
+dayjs.extend(relativeTime)
 
 @Component({
   selector: 'lib-discuss-card',
