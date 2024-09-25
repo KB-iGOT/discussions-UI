@@ -11,7 +11,7 @@
             <!-- select input field ====================-->
             <div class="start-form-input select_form_field_box" *ngIf="showSelectCategory" [ngClass]="{ 'is-invalid': showError('subTitle') }">
               <!-- <label class="start-form-label">Select Category<span class="required"></span></label> -->
-              <div class="start-form-field">
+              <div class="start-form-field" *ngIf="mode !== 'edit'">
                 <!-- <label>Select list</label> -->
                 <select formControlName="category" #category [required]="true" id="myList" class="post_form_select" [disabled]="!editable">
                   <option value="none" selected>Select Category</option>
