@@ -83,7 +83,11 @@
                         <div class="comments-area">
                             <div>
                                 <span class="vote-area">
-                  <a href="javascript:void(0)" role="link" *ngIf="!post.upvoted"
+                  <a href="javascript:void(0)" role="link" *ngIf="!post.upvoted && post?.uid === igotUserProfile?.nodebbid"
+                    aria-label="upvote the post" id="up-vote" class="df-btn-disabled ">
+                    <img src="./assets/discussion-ui/images/up-arrow.png" alt="up-arrow" class="icons">
+                  </a>
+                  <a href="javascript:void(0)" role="link" *ngIf="!post.upvoted && post?.uid !== igotUserProfile?.nodebbid"
                     (click)="upvote(post);logTelemetry($event, post)" aria-label="upvote the post" id="up-vote">
                     <img src="./assets/discussion-ui/images/up-arrow.png" alt="up-arrow" class="icons">
                   </a>
@@ -95,7 +99,11 @@
                     [attr.aria-label]="'total upvoat is' + data?.upvotes">{{data?.upvotes}}</span>
                                 </span>
                                 <span class="vote-area">
-                  <a href="javascript:void(0)" *ngIf="!post?.downvoted" role="link"
+                  <a href="javascript:void(0)" *ngIf="!post?.downvoted && post?.uid === igotUserProfile?.nodebbid" role="link"
+                  (click)="downvote(post);logTelemetry($event, post)" aria-label="downvote post" id="down-vote" class="df-btn-disabled ">
+                  <img src="./assets/discussion-ui/images/down-arrow.png" class="icons">
+                </a>
+                  <a href="javascript:void(0)" *ngIf="!post?.downvoted && post?.uid !== igotUserProfile?.nodebbid" role="link"
                     (click)="downvote(post);logTelemetry($event, post)" aria-label="downvote post" id="down-vote">
                     <img src="./assets/discussion-ui/images/down-arrow.png" class="icons">
                   </a>
