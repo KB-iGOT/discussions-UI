@@ -35,14 +35,13 @@
       <span class="timing">{{discussionData.lastposttime | date}}</span> -->
         </div>
     </div>
-    <div class="tags margin-bottom-s">
+    <!-- <div class="tags margin-bottom-s">
         <ng-container *ngIf="discussionData && discussionData.tags && discussionData.tags.length > 0">
-            <!-- <span *ngFor="let tag of discussionData.tags" class="tag" [ngStyle]="getBgColor(tag.value)"> -->
             <span *ngFor="let tag of discussionData.tags" class="tag post_tag margin-right-s">
             {{tag.value}}
             </span>
         </ng-container>
-    </div>
+    </div> -->
     <div class="discuss-card-comments ">
         <div class="discuss-comments-area ">
             <span class="votes-content ">

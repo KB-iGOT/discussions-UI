@@ -3,10 +3,10 @@
 <div class="my-discussion">
     <div class="profileCard">
         <div class="profilecard-content">
-            <div class="profile-header-image" *ngIf="!igotUserProfile?.firstName">
-                <span class="box-text" ><span class="circle-label"></span>{{ data?.username | splitInitials }}</span>
+            <div class="profile-header-image" *ngIf="!igotUserProfile?.profileImageUrl && igotUserProfile?.firstName">
+                <span class="box-text" ><span class="circle-label"></span>{{ igotUserProfile?.firstName | splitInitials }}</span>
             </div>
-            <div class="profile-image-wrapper" *ngIf="igotUserProfile?.firstName">
+            <div class="profile-image-wrapper" *ngIf="igotUserProfile?.profileImageUrl">
                 <img  alt="profile image" class="profile-pic shadow-md" [src]="igotUserProfile?.profileImageUrl">
             </div>
             <div class="info">

@@ -12,7 +12,7 @@ export class SplitInitialsPipe implements PipeTransform {
       name.forEach(element => {
         userInitial = userInitial + element.charAt(0);
       });
-      return userInitial;
+      return userInitial.substring(0,2);
     }
   }
 }

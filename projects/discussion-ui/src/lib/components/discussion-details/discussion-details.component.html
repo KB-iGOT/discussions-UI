@@ -67,14 +67,14 @@
 
 
                         <!-- discussion tags ---->
-                        <div class="tags margin-top-m" role="link" tabindex="0" aria-label="tags">
-                            <ng-container *ngIf="data && data?.tags && data?.tags?.length > 0">
+                        <!-- <div class="tags margin-top-m" role="link" tabindex="0" aria-label="tags">
+                            <ng-container *ngIf="data && data?.tags && data?.tags?.length > 0"> -->
                                 <!-- <span *ngFor="let tag of data?.tags" class="tag" role="link" tabindex="0" [ngStyle]="getBgColor(tag.value)"> -->
-                                <span *ngFor="let tag of data?.tags" class="tag post_tag" role="link" tabindex="0">
+                                <!-- <span *ngFor="let tag of data?.tags" class="tag post_tag" role="link" tabindex="0">
                                    {{tag.value}}
                                 </span>
                             </ng-container>
-                        </div>
+                        </div> -->
 
                         <!-- discussion content -->
                         <p role="link" tabindex="0" class="discussion-heading df-text-color margin-top-s" [innerHTML]="post?.content"></p>
