@@ -319,15 +319,16 @@ select.post_form_select:focus {
 			max-width: 95%;
 			box-sizing: border-box;
 			padding: 15px 15px 0 15px;
-			top: 8%;
+			top: calc(6% + 105px);
     		left: 2.5%;
 			transform: none;
+			// bottom: 76px;
 
 			.discussion-start-form {
 				.start-form-field {
 					width: 100%;
 					box-sizing: border-box;
-					margin-bottom: 0;
+					margin-bottom: 1rem;
 
 					.textarea_box {
 						width: 100%;
